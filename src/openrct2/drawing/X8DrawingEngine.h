@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
  * Copyright (c) 2014-2018 OpenRCT2 developers
  *
  * For a complete list of all authors, please refer to contributors.md
@@ -95,7 +95,6 @@ namespace OpenRCT2
             void BeginDraw() override;
             void EndDraw() override;
             void PaintWindows() override;
-            void UpdateWindows() override;
             void PaintRain() override;
             void CopyRect(int32_t x, int32_t y, int32_t width, int32_t height, int32_t dx, int32_t dy) override;
             int32_t Screenshot() override;

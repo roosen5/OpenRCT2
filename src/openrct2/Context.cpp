@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
  * Copyright (c) 2014-2018 OpenRCT2 developers
  *
  * For a complete list of all authors, please refer to contributors.md
@@ -862,7 +862,6 @@ namespace OpenRCT2
                 _drawingEngine->BeginDraw();
                 _painter->Paint(*_drawingEngine);
                 _drawingEngine->EndDraw();
-                _drawingEngine->UpdateWindows();
             }
         }
 
@@ -910,11 +909,6 @@ namespace OpenRCT2
                 _drawingEngine->EndDraw();
 
                 sprite_position_tween_restore();
-                
-                // Note: Its important to call update windows after restoring the sprite positions, not in between
-                // Otherwise the window updates to positions of sprites could be reverted
-                // I noticed this after mouse wheeling on a track's setting which would remove all the peeps from the ride which caused a hang
-                _drawingEngine->UpdateWindows();
             }
         }
 
