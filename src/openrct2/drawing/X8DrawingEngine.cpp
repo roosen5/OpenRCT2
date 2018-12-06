@@ -1,4 +1,4 @@
-/*****************************************************************************
+﻿/*****************************************************************************
  * Copyright (c) 2014-2018 OpenRCT2 developers
  *
  * For a complete list of all authors, please refer to contributors.md
@@ -224,8 +224,10 @@ void X8DrawingEngine::PaintWindows()
     DrawAllDirtyBlocks();
     window_update_all_viewports();
     DrawAllDirtyBlocks();
+}
 
-    // TODO move this out from drawing
+void X8DrawingEngine::UpdateWindows()
+{
     window_update_all();
 }
 

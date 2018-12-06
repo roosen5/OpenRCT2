@@ -1,4 +1,4 @@
-/*****************************************************************************
+﻿/*****************************************************************************
  * Copyright (c) 2014-2018 OpenRCT2 developers
  *
  * For a complete list of all authors, please refer to contributors.md
@@ -274,8 +274,10 @@ public:
     {
         window_update_all_viewports();
         window_draw_all(&_bitsDPI, 0, 0, _width, _height);
+    }
 
-        // TODO move this out from drawing
+    void UpdateWindows() override
+    {
         window_update_all();
     }
 
